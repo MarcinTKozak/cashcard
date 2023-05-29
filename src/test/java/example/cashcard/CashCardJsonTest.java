@@ -25,11 +25,13 @@ public class CashCardJsonTest {
 
         assertThat(json.write(cashCard)).hasJsonPathNumberValue("@.id");
 
-        assertThat(json.write(cashCard)).extractingJsonPathNumberValue("@.id").isEqualTo(99);
+        assertThat(json.write(cashCard)).extractingJsonPathNumberValue("@.id")
+                .isEqualTo(99);
 
         assertThat(json.write(cashCard)).hasJsonPathNumberValue("@.amount");
 
-        assertThat(json.write(cashCard)).extractingJsonPathNumberValue("@.amount").isEqualTo(123.45);
+        assertThat(json.write(cashCard)).extractingJsonPathNumberValue("@.amount")
+                .isEqualTo(123.45);
     }
 
     @Test
